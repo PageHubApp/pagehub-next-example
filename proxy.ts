@@ -5,7 +5,7 @@ import { pagehubMiddleware } from "@pagehub/next";
 // Every other path falls through to the app (and then to PageHub's fallback rewrite).
 export function proxy(request: NextRequest) {
   const pagehub = pagehubMiddleware(request, {
-    site: "ph-email-test",
+    site: process.env.PAGEHUB_SITE || "ph-email-test",
     mountKey: process.env.PAGEHUB_MOUNT_KEY,
   });
   if (pagehub) return pagehub;

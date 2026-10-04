@@ -22,7 +22,7 @@ Edit the site in PageHub and publish. The change shows up on the app's domain wi
 1. **In PageHub, turn on static publishing** for the site and publish it (MCP: `publish_site({ static: true })`).
 2. **Set the mount origin** to your app's origin, for example `https://example.com` (MCP: `update_site({ mountOrigin: "https://example.com" })`). The reply includes a mount key that starts with `phmk_`. You'll need it in step 5. To replace it later, run `update_site({ rotateMountKey: true })`.
 3. **Install the package:** `pnpm add @pagehub/next`.
-4. **Point the app at your site:** change `PAGEHUB_SITE` in `next.config.js` and `site` in `proxy.ts` to your site's name.
+4. **Point the app at your site:** set `PAGEHUB_SITE` to your site's name in the app's environment, for example `PAGEHUB_SITE=acme`. Without it the app serves the demo site, `ph-email-test`. On Vercel, add it before you deploy (`vercel env add PAGEHUB_SITE production`): the rewrites are fixed at build time, so changing it later takes a redeploy.
 5. **Add the mount key to your app's environment** as `PAGEHUB_MOUNT_KEY`. On Vercel: `vercel env add PAGEHUB_MOUNT_KEY production`. Keep it out of git. Without it the site still works, but PageHub sees every visitor as your server, so form rate limits and analytics lump everyone together.
 
 Then delete any app page you've rebuilt in PageHub, and PageHub serves that path from then on.
@@ -31,7 +31,7 @@ Then delete any app page you've rebuilt in PageHub, and PageHub serves that path
 
 ```sh
 pnpm install
-PAGEHUB_MOUNT_KEY=phmk_... pnpm dev
+PAGEHUB_SITE=your-site PAGEHUB_MOUNT_KEY=phmk_... pnpm dev
 ```
 
 Open http://localhost:3000 for the PageHub site and http://localhost:3000/signin for the app's page.

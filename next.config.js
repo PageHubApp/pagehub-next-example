@@ -1,8 +1,11 @@
 // @ts-check
 const { withPageHub, pagehubCspSources } = require("@pagehub/next");
 
-/** Your PageHub site's name (served from https://<site>.pagehub.dev). proxy.ts uses the same name. */
-const PAGEHUB_SITE = "ph-email-test";
+/**
+ * Your PageHub site's name (served from https://<site>.pagehub.dev). proxy.ts reads the same variable.
+ * Set PAGEHUB_SITE in the build environment: the rewrites are fixed when the app builds.
+ */
+const PAGEHUB_SITE = process.env.PAGEHUB_SITE || "ph-email-test";
 
 /** The app's own CSP, with the sources PageHub pages need merged in. */
 const csp = {
