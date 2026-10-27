@@ -234,7 +234,7 @@ packages:
     os: [win32]
 
   '@pagehub/next@file:vendor/pagehub-next-0.1.0.tgz':
-    resolution: {integrity: sha512-cuUP+ufstbzV+Rgdxr/cjiR72X25HXFkPKnoVQ3JgAjOpEoQII1ylAmwb/pSLR14zdlrpw1nWRHk26nU9nTWaQ==, tarball: file:vendor/pagehub-next-0.1.0.tgz}
+    resolution: {integrity: sha512-TEaS1jYIyMzpRbgq1sh5a2dKdb2qdFQrXIrI5pW9wbwAPEIao4VTZmiudY7Z7HxG7HvRispIP3unX2UfkRtNrA==, tarball: file:vendor/pagehub-next-0.1.0.tgz}
     version: 0.1.0
     peerDependencies:
       next: '>=13'
