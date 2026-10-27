@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@pagehub/next':
-        specifier: file:vendor/pagehub-next-0.1.0.tgz
-        version: file:vendor/pagehub-next-0.1.0.tgz(next@16.3.8(@types/node@22.20.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))
+        specifier: ^0.1.0
+        version: 0.1.0(next@16.3.8(@types/node@22.20.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))
       next:
         specifier: ^16.2.7
         version: 16.3.8(@types/node@22.20.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -233,9 +233,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@pagehub/next@file:vendor/pagehub-next-0.1.0.tgz':
-    resolution: {integrity: sha512-TEaS1jYIyMzpRbgq1sh5a2dKdb2qdFQrXIrI5pW9wbwAPEIao4VTZmiudY7Z7HxG7HvRispIP3unX2UfkRtNrA==, tarball: file:vendor/pagehub-next-0.1.0.tgz}
-    version: 0.1.0
+  '@pagehub/next@0.1.0':
+    resolution: {integrity: sha512-xDtUcoK82G7CMjy6VPTVXJQNfmR7+KmpUQX77jOcDN+u6asboEQNkYIitRhnyk3Hr3XegIpvgR5xWGkWjXM2fA==}
+    engines: {node: '>=18'}
     peerDependencies:
       next: '>=13'
     peerDependenciesMeta:
@@ -496,7 +496,7 @@ snapshots:
   '@next/swc-win32-x64-msvc@16.3.8':
     optional: true
 
-  '@pagehub/next@file:vendor/pagehub-next-0.1.0.tgz(next@16.3.8(@types/node@22.20.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))':
+  '@pagehub/next@0.1.0(next@16.3.8(@types/node@22.20.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))':
     optionalDependencies:
       next: 16.3.8(@types/node@22.20.5)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
 

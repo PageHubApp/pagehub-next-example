@@ -36,15 +36,6 @@ PAGEHUB_SITE=your-site PAGEHUB_MOUNT_KEY=phmk_... pnpm dev
 
 Open http://localhost:3000 for the PageHub site and http://localhost:3000/signin for the app's page.
 
-## About the vendored package
-
-`@pagehub/next` isn't on npm yet, so this repo installs it from `vendor/pagehub-next-0.1.0.tgz`. Once it's published, switch to the npm version:
-
-```sh
-pnpm add @pagehub/next
-rm -r vendor
-```
-
 ## Limits
 
 - The PageHub site must be static-published.
